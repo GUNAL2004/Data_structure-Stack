@@ -1,0 +1,52 @@
+Postfix Expression Evaluation
+
+Write a program to accept a postfix expression as a string and solve it and print it.
+
+Input Format
+Accept a string as an input from the user
+Output Format
+Print the solved expression in integer format as output.
+
+Constraints
+1 <= str <= 1000
+
+Input: 2 3 1 * + 9 -
+Output: -4
+Explanation: If the expression is converted into an infix expression, it will be 2 + (3 * 1) – 9 = 5 – 9 = -4
+
+
+SOLUTION:
+
+
+
+def evaluate_postfix(expression):
+    stack = []
+    
+    # Split the postfix expression into tokens
+    tokens = expression.split()
+    
+    # Iterate through each token in the postfix expression
+    for token in tokens:
+        if token.isdigit():  # If the token is a digit, it's an operand
+            stack.append(int(token))
+        else:  # If the token is an operator
+            operand2 = stack.pop()
+            operand1 = stack.pop()
+            if token == '+':
+                result = operand1 + operand2
+            elif token == '-':
+                result = operand1 - operand2
+            elif token == '*':
+                result = operand1 * operand2
+            elif token == '/':
+                result = operand1 // operand2
+            stack.append(result)
+    return stack.pop()
+if __name__ == "__main__":
+    expression = input().strip()
+    result = evaluate_postfix(expression)
+    print(result)
+
+
+
+
