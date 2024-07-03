@@ -1,0 +1,28 @@
+Problem Statement:
+
+Penny works in a post office she had a task to sort the mail efficiently. She created a system that expertly directed every letter to its intended recipient. Errors were graciously handled, and resources were wisely managed to guarantee seamless operations. Help Penny to write a program on stack implementation and perform push operations to establish the standard for mail delivery.
+
+Input Format:
+The first line for the input consist of N the number of elements.
+The second line of the input consist of value to be push into the stack.
+
+Output Format:
+The output display the elements inserted into the stack.
+
+Constraints
+1<=input<=100
+
+Sample Input:
+5
+12 23 45 67 78
+
+Sample Output:
+[12, 23, 45, 67, 78]
+
+
+SOLUTION:
+
+
+n=int(input())
+ls=input().split()
+print(ls)
