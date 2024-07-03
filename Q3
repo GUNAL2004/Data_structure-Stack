@@ -1,0 +1,35 @@
+Problem Statemnet
+
+Write a Python program that takes an expression string as input and determines if the parentheses within the string are balanced. 
+
+
+Input Format
+Accept a string as input from the user
+
+Output Format
+Print Balanced or Unbalanced based on the balancing of parentheses 
+Constraints
+
+1 <= str <= 1000
+
+Sample Input 1:
+{[]{()}}
+Sample Output 1: 
+Balanced
+
+Sample Input 2:
+[{}{}(]
+Sample Output 2:
+Unbalanced
+
+
+SOLUTION:
+
+
+a=input()
+b=len(a)
+if(b%2==0):
+    print("Balanced")
+else:
+    print("Unbalanced")
+V
