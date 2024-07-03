@@ -1,0 +1,31 @@
+Mr. Arul is working on a project to build a simple stack data structure in Python programming language. A team, consisting of Alice, Bob, and Charlie, has already implemented the `push` operation to add elements to the stack. Now, it's your turn to implement the `pop` operation, which removes and returns the top element from the stack
+
+Input Format
+The first line contains an integer n, the number of elements to push onto the stack.
+
+Output Format
+The first line pops lines containing the elements popped from the stack.
+The final line contains the remaining elements in the stack, printed as a list.
+
+Constraints
+
+1≤n≤100 — The number of elements to be pushed onto the stack.
+0≤pops≤n — The number of elements to be popped from the stack.
+Handling empty stack conditions, and passing the existing test suite.
+Sample Input 1:
+1 2 3 45
+
+Sample Output 1:
+45
+[1, 2, 3]
+
+
+SOLUTION:
+
+
+ls=list(map(int,input().split()))
+if(len(ls)>0):
+    print(ls.pop())
+    print(ls)
+else:
+    print("Stack is empty")
