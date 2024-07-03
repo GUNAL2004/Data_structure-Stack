@@ -1,0 +1,75 @@
+Problem Statement: Determining if a Stack is Empty
+
+Create a Python function isEmpty() to check if a stack is empty or not. The function should take one parameter: top, which represents the current index of the top element in the stack. If the stack is non-empty (i.e., top is greater than -1), the function should return 1. Otherwise, if the stack is empty (i.e., top is -1), the function should return 0.
+
+Write a program to complete the isEmpty() function and execute.
+
+Input Format:
+Case 1: Enter the N number of element in the stack.
+Case 2: No need to read any input to check an empty stack.
+
+Output Format:
+1 if the stack is non-empty.
+0 if the stack is empty.
+
+Constraints
+1<=input<=100
+
+Sample Input 1:
+1 2 3 4 5
+
+Sample Output 1:
+The stack is non-empty.
+Stack: [1, 2, 3, 4, 5]
+Top value index: 4
+
+
+Sample Input 2:
+
+Sample Output 2:
+The stack is empty.
+Stack: []
+Top value index: -1
+
+
+
+SOLUTION:
+
+
+
+class ll:
+    def __init__(self):
+        self.top=None
+    class Node:
+        def __init__(self,data):
+            self.data=data
+            self.next=None
+    def push(self,new_data):
+         new_node=self.Node(new_data)
+         new_node.next=self.top
+         self.top=new_node
+    def display(self):
+        temp=self.top
+        k=[]
+        while(temp!=None):
+            k.append(temp.data)
+            temp=temp.next
+        print("Stack: ",k[::-1])
+           
+    def empty(self):
+        return self.top is None
+       
+lst=list(map(int,input().split()))
+k=ll()
+for i in lst:
+    k.push(i)
+if k.empty():
+    print("The stack is empty")
+    print("stack: []")
+    print("Top value index: -1")
+else:
+    print("The stack is non-empty.")
+    k.display()
+    print("Top value index: ",len(lst)-1)
+
+
